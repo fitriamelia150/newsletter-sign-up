@@ -1,0 +1,254 @@
+@import 'variable';
+@font-face { font-family: roboto-regular; 
+	src: url('/assets/fonts/Roboto-Regular.ttf'); 
+} 
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+// reset css
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+// reset css
+
+
+
+.container-success{
+	display: none;
+}
+
+
+body {
+	font-family: roboto-regular;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	min-width: 375px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	.form {
+		padding: 20px;
+		h1 {
+			color: $neutral-dark-slate-grey;
+			font-size: 3.4em;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			margin-bottom: 20px;
+		}
+
+		p {
+			line-height: 25px;
+		}
+
+		ul {
+			padding: 30px;
+			line-height: 25px;
+			list-style-image: url('/assets/images/icon-list.svg');
+
+			li {
+				margin-bottom: 10px;
+			}
+		}
+
+		.form-action {
+			display: flex;
+			flex-direction: column;
+
+			label {
+				font-size: small;
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+	
+			input[type="text"] {
+				padding: 15px;
+				border-radius: 5px;
+				border: 0.1px solid hsl(231, 7%, 60%);
+				margin-bottom: 25px;
+			}
+	
+		}
+
+	}
+}
+
+.container-success {
+	padding: 20px;
+
+	img {
+		margin-top: 100px;
+		margin-bottom: 40px;
+	}
+
+	h1 {
+		font-size: 2.5em;
+		font-weight: 600;
+		color: $neutral-dark-slate-grey;
+		margin-bottom: 40px;
+	}
+
+	p {
+		line-height: 25px;
+		margin-bottom: 320px;
+		.email {
+			font-weight: 600;
+			color: $neutral-dark-slate-grey;
+		}
+	}
+
+	a {
+		padding: 20px 100px;
+	}
+
+}
+
+@media (width > 600px) {
+	body {
+		background-color: $neutral-charcoal-grey;
+		min-height: 100vh;
+	}
+
+
+	.container {
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		border-radius: 20px;
+		background-color: $neutral-white;
+		margin: 0px auto;
+		width: 952px;
+		align-items: center;
+		padding-left: 20px;
+
+		img {
+			content: url('/assets/images/illustration-sign-up-desktop.svg');
+			border-radius: 20px;
+			margin: 20px;
+		}
+
+		.form {
+			padding: 40px;
+		}
+	}
+
+	.container-success {
+		width: 450px;
+		background-color: $neutral-white;
+		padding: 40px;
+		border-radius: 20px;
+		margin: auto;
+
+		h1 {
+			font-size: 3.5em;
+		}
+
+		h1, p, a {
+			margin-bottom: 40px;
+		}
+
+		img {
+			margin-top: 0px;
+		}
+
+		a {
+			padding: 15px;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	text-align: center;
+	font-size: 1em;
+	padding: 20px;
+	background-color: $neutral-dark-slate-grey;
+	color: $neutral-white;
+	font-weight: 600;
+	border-radius: 5px;
+	display: block;
+	margin-bottom: 15px;
+
+	&:hover {
+		// background-color: $primary_tomato;
+		background: linear-gradient(0.25turn, #ff3a96, #fc9a31);
+	}
+}
+
+input {
+	cursor: pointer;
+}
+
+.label {
+	display: flex;
+	justify-content: space-between;
+
+	.info-error {
+		color: hsl(4, 100%, 67%);
+	}
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.invalid-email {
+	background-color: hsla(4, 100%, 67%, 20%);
+	border: 1px solid hsla(4, 100%, 67%, 50%);
+	color: hsl(4, 100%, 67%);
+}
