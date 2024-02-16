@@ -1,6 +1,6 @@
 @import 'variable';
 @font-face { font-family: roboto-regular; 
-	src: url('/assets/fonts/Roboto-Regular.ttf'); 
+	src: url('../fonts/Roboto-Regular.ttf'); 
 } 
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -96,7 +96,7 @@ body {
 		ul {
 			padding: 30px;
 			line-height: 25px;
-			list-style-image: url('/assets/images/icon-list.svg');
+			list-style-image: url('../images/icon-list.svg');
 
 			li {
 				margin-bottom: 10px;
@@ -173,7 +173,7 @@ body {
 		padding-left: 20px;
 
 		img {
-			content: url('/assets/images/illustration-sign-up-desktop.svg');
+			content: url('../images/illustration-sign-up-desktop.svg');
 			border-radius: 20px;
 			margin: 20px;
 		}
